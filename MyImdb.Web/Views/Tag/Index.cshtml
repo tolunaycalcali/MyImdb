@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Tag>
+
+
+
+<div class="container">
+    <h1>Etiketler</h1>
+    <row class="mb-2">
+        <a asp-action="Create" class="btn btn-primary mb-2">Yeni Etiket</a>
+    </row>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Etiket Tanım</th>
+                <td>Durum</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>
+                        @if (item.isActive)
+                        {
+                            <span class="badge bg-success">@item.isActiveString</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">@item.isActiveString</span>
+
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-primary mr-2" asp-action="Details" asp-route-id="@item.Id">Detay</a>
+                        <a class="btn btn-warning mr-2" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

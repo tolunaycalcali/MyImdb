@@ -1,0 +1,84 @@
+﻿@model Movie
+
+@{
+    var idList = Model.Movie_Tag.Select(x => x.TagId).ToArray();
+
+    var sIdList = string.Join(",", idList);
+}
+
+<div class="container">
+    <h1>Film Güncelle</h1>
+    <form autocomplete="off" asp-action="Edit" enctype="multipart/form-data">
+        @Html.HiddenFor(x => x.CreatedBy)
+        @Html.HiddenFor(x => x.CreatedOn)
+        @Html.HiddenFor(x=> x.ImagePath)
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"> </span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ReleaseDate" class="form-label"></label>
+            <input asp-for="ReleaseDate" class="form-control">
+            <span asp-validation-for="ReleaseDate" class="text-danger"> </span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Director" class="form-label"></label>
+            <input asp-for="Director" class="form-control">
+            <span asp-validation-for="Director" class="text-danger"> </span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="TagIdList"></label>
+            <select asp-for="TagIdList" asp-items="ViewBag.Tags" class="form-control" multiple="multiple" data-close-on-select="false">
+            </select>
+            @* <span asp-validation-for="Director" class="text-danger"> </span> *@
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" asp-for="isActive" checked="checked">
+            <label class="form-check-label" asp-for="isActive"></label>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" asp-for="ImagePath"></label>
+            <input class="form-control" type="file" id="formFile" name="formFile">
+        </div>
+
+        <div class="mb-3">
+            <img id="preview" src="/MovieImage/@Model.ImagePath" style="max-width:300px;max-height:300px" />
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+</div>
+
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            $('#TagIdList').select2();
+
+            var idListArr = [];
+            var idList = '@sIdList'.split(',');
+
+            $('#TagIdList').val(idList);
+            $('#TagIdList').trigger('change');
+
+            $('#formFile').on('change', function (event) {
+                var file = event.target.files[0];
+
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#preview').attr('src', e.target.result).show();
+                    }
+                    reader.readAsDataURL(file);
+                }
+            })
+        });
+
+    </script>
+}

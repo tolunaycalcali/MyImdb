@@ -1,0 +1,14 @@
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\bin\Debug\net8.0\MyImdb.DAL.deps.json
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\bin\Debug\net8.0\MyImdb.DAL.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\bin\Debug\net8.0\MyImdb.DAL.pdb
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.csproj.AssemblyReference.cache
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.AssemblyInfoInputs.cache
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.AssemblyInfo.cs
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.csproj.CoreCompileInputs.cache
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\refint\MyImdb.DAL.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.pdb
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\ref\MyImdb.DAL.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\bin\Debug\net8.0\MyImdb.DAL.runtimeconfig.json
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.genruntimeconfig.cache

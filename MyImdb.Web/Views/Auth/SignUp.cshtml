@@ -1,0 +1,33 @@
+﻿@model AppUserDto
+
+
+<div class="container">
+    <form asp-action="SignUp">
+        <div class="mb-3">
+            <label class="form-label" asp-for="Ad"></label>
+            <input type="text" class="form-control" asp-for="Ad">
+            <span class="text-danger" asp-validation-for="Ad"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Soyad"></label>
+            <input type="text" class="form-control" asp-for="Soyad">
+            <span class="text-danger" asp-validation-for="Soyad"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Username"></label>
+            <input type="text" class="form-control" asp-for="Username">
+            <span class="text-danger" asp-validation-for="Username"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Email"></label>
+            <input type="text" class="form-control" asp-for="Email">
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Password"></label>
+            <input type="text" class="form-control" asp-for="Password">
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

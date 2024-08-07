@@ -1,0 +1,60 @@
+﻿@model List<Movie>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <form asp-action="Index" method="post" id="filterForm">
+        <div class="input-group mb-3">
+
+            <input type="text" class="form-control" name="Name" id="Name" placeholder="Arama yapmak için film adı girin.">
+            <button class="btn btn-outline-primary" type="submit">Ara</button>
+            <button class="btn btn-outline-warning" type="button" id="clear">Filtreyi Sıfırla</button>
+        </div>
+    </form>
+
+    <div class="row justify-content-between">
+
+        @foreach (var item in Model)
+        {
+            <div class="card mb-5" style="width: 18rem;">
+                <img src="/MovieImage/@item.ImagePath" class="card-img-top" alt="@item.Name" style="height:250px">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">
+                        @foreach (var tag in item.Movie_Tag)
+                        {
+                            <span class="badge bg-primary">@tag.Tag.Name</span>
+                        }
+                    </p>
+                    <div class="my-rating mb-3"></div>
+                    <div class="d-grid gap-2">
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary">Detay -></a>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+
+
+</div>
+
+@section Scripts {
+    <script>
+        $(".my-rating").starRating({
+            starSize: 25,
+            callback: function (currentRating, $el) {
+                // make a server call here
+            }
+        });
+
+
+        $('#clear').click(function (e) {
+            $('#Name').val('');
+            $('#filterForm').submit();
+            // e.submit();
+        })
+    </script>
+}

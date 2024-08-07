@@ -1,0 +1,83 @@
+﻿@model Movie
+
+
+<div class="container">
+    <h1>Yeni Film</h1>
+    <form autocomplete="off" asp-action="Create" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"> </span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ReleaseDate" class="form-label"></label>
+            <input asp-for="ReleaseDate" class="form-control">
+            <span asp-validation-for="ReleaseDate" class="text-danger"> </span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Director" class="form-label"></label>
+            <input asp-for="Director" class="form-control">
+            <span asp-validation-for="Director" class="text-danger"> </span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="TagIdList"></label>
+            <select asp-for="TagIdList" asp-items="ViewBag.Tags" class="form-control" multiple="multiple" data-close-on-select="false">
+            </select>
+            @* <span asp-validation-for="Director" class="text-danger"> </span> *@
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" asp-for="isActive" checked="checked">
+            <label class="form-check-label" asp-for="isActive"></label>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" asp-for="ImagePath"></label>
+            <input class="form-control" type="file" id="formFile" name="formFile" accept="image/*">
+        </div>
+
+        <div class="mb-3">
+            <img id="preview" src="/assets/resim-yok.png" style="max-width:300px;max-height:300px" />
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+</div>
+
+
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+            $('#TagIdList').select2();
+
+
+            $('#formFile').on('change', function (event) {
+                var file = event.target.files[0];
+
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#preview').attr('src', e.target.result).show();
+                    }
+                    reader.readAsDataURL(file);
+                }
+            })
+
+
+
+        @if (Model?.TagIdList?.Length > 0)
+        {
+            <text>
+                    console.log('@Model.Name');
+
+                $('#TagIdList').val('@Model.TagIdList.ToString()');
+                $('#TagIdList').trigger();
+            </text>
+
+        }
+                               })
+    </script>
+}

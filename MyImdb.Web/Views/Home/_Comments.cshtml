@@ -1,0 +1,14 @@
+﻿@model List<Movie_Comment>
+
+@foreach (var item in Model)
+{
+    <div class="card mb-2">
+        <div class="card-header">
+            @item.CreatedBy
+        </div>
+        <div class="card-body">
+            <div class="my-rating mb-2" id="rating_@item.Id"></div>
+            @item.Comment
+        </div>
+    </div>
+}

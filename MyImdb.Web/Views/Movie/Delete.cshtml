@@ -1,0 +1,38 @@
+﻿@model Movie
+
+<div class="container">
+    <h1>Film Detay</h1>
+    <div class="alert alert-danger" role="alert">
+        Silme işlemi geri alınamaz.
+    </div>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-2">
+            <img src="/MovieImage/@Model.ImagePath" />
+        </div>
+        <div class="mb-2">
+            @foreach (var item in Model.Movie_Tag)
+            {
+                <span class="badge bg-primary">@item.Tag.Name</span>
+            }
+        </div>
+        <div class="mb-2">
+            <label asp-for="Name" class="control-label fw-bold"></label>
+            <label class="control-label">: @Model.Name</label>
+        </div>
+        <div class="mb-2">
+            <label asp-for="ReleaseDate" class="control-label fw-bold"></label>
+            <label class="control-label">: @Model.ReleaseDate.ToShortDateString()</label>
+        </div>
+        <div class="mb-2">
+            <label asp-for="Director" class="control-label fw-bold"></label>
+            <label class="control-label">: @Model.Director</label>
+        </div>
+        <div class="mb-2">
+            <label asp-for="isActive" class="control-label fw-bold"></label>
+            <label class="control-label">: @Model.isActiveString</label>
+        </div>
+        <a class="btn btn-link" asp-action="Index">Listeye Geri Dön</a>
+        <button type="submit" class="btn btn-danger float-end">Sil</button>
+    </form>
+</div>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Movie>
+
+
+
+<div class="container">
+    <h1>Filmler</h1>
+    <row class="mb-2">
+        <a asp-action="Create" class="btn btn-primary mb-2">Yeni Film</a>
+    </row>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>@Html.DisplayNameFor(x=> x.Name)</td>
+                <td>@Html.DisplayNameFor(x=> x.ReleaseDate)</td>
+                <td>@Html.DisplayNameFor(x=> x.Director)</td>
+                <td>@Html.DisplayNameFor(x=> x.isActive)</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ReleaseDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Director)</td>
+                    <td>
+                        @if (item.isActive)
+                        {
+                            <span class="badge bg-success">@item.isActiveString</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">@item.isActiveString</span>
+
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-primary mr-2" asp-action="Details" asp-route-id="@item.Id">Detay</a>
+                        <a class="btn btn-warning mr-2" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

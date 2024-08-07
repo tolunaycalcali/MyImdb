@@ -1,0 +1,22 @@
+﻿@model Tag
+
+<div class="container">
+    <h1>Etiket Sil</h1>
+    <div class="alert alert-danger" role="alert">
+        Silme işlemi geri alınamaz.
+    </div>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-2">
+            <label asp-for="Name" class="control-label fw-bold"></label>
+            <label class="control-label">: @Model.Name</label>
+        </div>
+        <div class="mb-2">
+            <label asp-for="isActive" class="control-label fw-bold"></label>
+            <label class="control-label">: @Model.isActiveString</label>
+        </div>
+        <a class="btn btn-link" asp-action="Index">Listeye Geri Dön</a>
+        <button type="submit" class="btn btn-danger float-end">Sil</button>
+    </form>
+
+</div>
