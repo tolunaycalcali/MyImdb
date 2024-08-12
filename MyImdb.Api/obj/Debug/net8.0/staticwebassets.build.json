@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "CV/uR2waDXBP/f2CqXrJecJdp0k81laIOOn9HxoZiFA=",
+  "Source": "MyImdb.Api",
+  "BasePath": "_content/MyImdb.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
