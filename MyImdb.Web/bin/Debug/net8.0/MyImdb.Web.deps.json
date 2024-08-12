@@ -15,7 +15,9 @@
           "Microsoft.EntityFrameworkCore.Tools": "8.0.7",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.3",
           "Microsoft.jQuery.Unobtrusive.Ajax": "3.2.6",
-          "MyImdb.DAL": "1.0.0"
+          "MyImdb.Business": "1.0.0",
+          "MyImdb.DAL": "1.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "MyImdb.Web.dll": {}
@@ -2105,6 +2107,14 @@
           }
         }
       },
+      "MyImdb.Business/1.0.0": {
+        "dependencies": {
+          "MyImdb.DAL": "1.0.0"
+        },
+        "runtime": {
+          "MyImdb.Business.dll": {}
+        }
+      },
       "MyImdb.DAL/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
@@ -3405,6 +3415,11 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "MyImdb.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "MyImdb.DAL/1.0.0": {
       "type": "project",

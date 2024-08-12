@@ -271,3 +271,6 @@ C:\Users\tolun\source\repos\MyImdb\MyImdb.Web\bin\Debug\net8.0\runtimes\win\lib\
 C:\Users\tolun\source\repos\MyImdb\MyImdb.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\tolun\source\repos\MyImdb\MyImdb.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\tolun\source\repos\MyImdb\MyImdb.Web\bin\Debug\net8.0\libman.json
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Web\obj\Debug\net8.0\MyImdb.Web.sourcelink.json
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Web\bin\Debug\net8.0\MyImdb.Business.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Web\bin\Debug\net8.0\MyImdb.Business.pdb

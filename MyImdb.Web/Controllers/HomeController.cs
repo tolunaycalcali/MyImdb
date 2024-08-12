@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MyImdb.Business.Abstract;
 using MyImdb.DAL.Context;
 using MyImdb.DAL.Dtos;
 using MyImdb.DAL.Models;
@@ -14,13 +15,15 @@ namespace MyImdb.Web.Controllers
     {
         private readonly RoleManager<AppRole> _role;
         private readonly DataContext _dataContext;
+        private IMovieReport _movieReport;
 
-        public HomeController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<AppRole> role, DataContext dataContext = null) : base(userManager, signInManager)
+        public HomeController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<AppRole> role, DataContext dataContext = null, IMovieReport movieReport = null) : base(userManager, signInManager)
         {
             _role = role;
             _dataContext = dataContext;
             signInManager = _signInManager;
             userManager = _userManager;
+            _movieReport = movieReport;
         }
 
         [Authorize]
@@ -32,6 +35,12 @@ namespace MyImdb.Web.Controllers
             .Where(x => x.isActive && !x.isDeleted)
             .ToListAsync();
             return View(result);
+        }
+
+        public IActionResult Dashboard ()
+        {
+            var report = _movieReport.MovieReports();
+            return View(report);
         }
 
 

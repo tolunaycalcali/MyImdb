@@ -1,0 +1,16 @@
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\bin\Debug\net8.0\MyImdb.Business.deps.json
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\bin\Debug\net8.0\MyImdb.Business.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\bin\Debug\net8.0\MyImdb.Business.pdb
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\bin\Debug\net8.0\MyImdb.DAL.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\bin\Debug\net8.0\MyImdb.DAL.pdb
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.csproj.AssemblyReference.cache
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.AssemblyInfoInputs.cache
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.AssemblyInfo.cs
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.csproj.CoreCompileInputs.cache
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.sourcelink.json
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.csproj.CopyComplete
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\refint\MyImdb.Business.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\MyImdb.Business.pdb
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Business\obj\Debug\net8.0\ref\MyImdb.Business.dll

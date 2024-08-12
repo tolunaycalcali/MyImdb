@@ -3137,6 +3137,19 @@
           }
         }
       },
+      "MyImdb.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MyImdb.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyImdb.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyImdb.Business.dll": {}
+        }
+      },
       "MyImdb.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -8735,6 +8748,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "MyImdb.Business/1.0.0": {
+      "type": "project",
+      "path": "../MyImdb.Business/MyImdb.Business.csproj",
+      "msbuildProject": "../MyImdb.Business/MyImdb.Business.csproj"
+    },
     "MyImdb.DAL/1.0.0": {
       "type": "project",
       "path": "../MyImdb.DAL/MyImdb.DAL.csproj",
@@ -8750,7 +8768,9 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.7",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.3",
       "Microsoft.jQuery.Unobtrusive.Ajax >= 3.2.6",
-      "MyImdb.DAL >= 1.0.0"
+      "MyImdb.Business >= 1.0.0",
+      "MyImdb.DAL >= 1.0.0",
+      "Newtonsoft.Json >= 13.0.3"
     ]
   },
   "packageFolders": {
@@ -8780,6 +8800,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Business\\MyImdb.Business.csproj": {
+              "projectPath": "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Business\\MyImdb.Business.csproj"
+            },
             "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.DAL\\MyImdb.DAL.csproj": {
               "projectPath": "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.DAL\\MyImdb.DAL.csproj"
             }
@@ -8825,6 +8848,10 @@
           "Microsoft.jQuery.Unobtrusive.Ajax": {
             "target": "Package",
             "version": "[3.2.6, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           }
         },
         "imports": [

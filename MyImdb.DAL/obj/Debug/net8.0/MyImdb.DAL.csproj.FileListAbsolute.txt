@@ -12,3 +12,4 @@ C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.pdb
 C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\ref\MyImdb.DAL.dll
 C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\bin\Debug\net8.0\MyImdb.DAL.runtimeconfig.json
 C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.genruntimeconfig.cache
+C:\Users\tolun\source\repos\MyImdb\MyImdb.DAL\obj\Debug\net8.0\MyImdb.DAL.sourcelink.json

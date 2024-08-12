@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MyImdb.Business.Abstract;
+using MyImdb.Business.Concrete;
 using MyImdb.DAL.Context;
 using MyImdb.DAL.Models;
 
@@ -45,6 +47,8 @@ builder.Services.ConfigureApplicationCookie(opt =>
     opt.SlidingExpiration = true;
 
 });
+
+builder.Services.AddTransient<IMovieReport, MovieReportManager>();
 
 var app = builder.Build();
 

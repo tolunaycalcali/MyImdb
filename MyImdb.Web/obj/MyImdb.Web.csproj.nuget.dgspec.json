@@ -4,6 +4,65 @@
     "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Web\\MyImdb.Web.csproj": {}
   },
   "projects": {
+    "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Business\\MyImdb.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Business\\MyImdb.Business.csproj",
+        "projectName": "MyImdb.Business",
+        "projectPath": "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Business\\MyImdb.Business.csproj",
+        "packagesPath": "C:\\Users\\tolun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tolun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.DAL\\MyImdb.DAL.csproj": {
+                "projectPath": "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.DAL\\MyImdb.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.DAL\\MyImdb.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -111,6 +170,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Business\\MyImdb.Business.csproj": {
+                "projectPath": "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.Business\\MyImdb.Business.csproj"
+              },
               "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.DAL\\MyImdb.DAL.csproj": {
                 "projectPath": "C:\\Users\\tolun\\source\\repos\\MyImdb\\MyImdb.DAL\\MyImdb.DAL.csproj"
               }
@@ -156,6 +218,10 @@
             "Microsoft.jQuery.Unobtrusive.Ajax": {
               "target": "Package",
               "version": "[3.2.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
