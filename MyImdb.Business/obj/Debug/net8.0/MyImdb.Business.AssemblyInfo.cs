@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyImdb.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86b65fc3f4e1552243ae8188b3f9918347862d84")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyImdb.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyImdb.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyImdb.DAL.Context;
 using MyImdb.DAL.Models;
@@ -16,12 +17,14 @@ namespace MyImdb.Api.Controllers
         }
 
         [HttpGet("GetList")]
+        [Authorize]
         public async Task<IEnumerable<Tag>> GetList()
         {
             return await _dataContext.Tag.Where(x => x.isActive && !x.isDeleted).ToListAsync();
         }
 
         [HttpGet("GetById")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<ActionResult<Tag>> GetById(int? id)
         {
             if (id == null)

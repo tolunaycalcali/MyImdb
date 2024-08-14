@@ -1,9 +1,13 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using MyImdb.Api.Auth;
 using MyImdb.Business.Abstract;
 using MyImdb.Business.Concrete;
 using MyImdb.DAL.Context;
 using MyImdb.DAL.Models;
+using System.Text;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,6 +42,25 @@ builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 }).AddEntityFrameworkStores<DataContext>()
 .AddDefaultTokenProviders();
 
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(jwt =>
+{
+    jwt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidIssuer = builder.Configuration["AppSettings:ValidIssuer"],
+        ValidAudience = builder.Configuration["AppSettings:ValidAudience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Appsettings:Secret"])),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = false,
+        ValidateIssuerSigningKey = true
+    };
+});
+
 builder.Services.Configure<SecurityStampValidatorOptions>(x =>
 {
     x.ValidationInterval = TimeSpan.Zero;
@@ -61,6 +84,8 @@ builder.Services.ConfigureApplicationCookie(opt =>
 });
 
 builder.Services.AddTransient<IMovieReport, MovieReportManager>();
+builder.Services.AddTransient<ITokenService, TokenManager>();
+builder.Services.AddTransient<IAuthService, AuthManager>();
 
 
 var app = builder.Build();
@@ -72,6 +97,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

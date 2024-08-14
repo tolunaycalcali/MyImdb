@@ -80,3 +80,4 @@ C:\Users\tolun\source\repos\MyImdb\MyImdb.Api\obj\Debug\net8.0\MyImdb.Api.pdb
 C:\Users\tolun\source\repos\MyImdb\MyImdb.Api\obj\Debug\net8.0\MyImdb.Api.genruntimeconfig.cache
 C:\Users\tolun\source\repos\MyImdb\MyImdb.Api\obj\Debug\net8.0\ref\MyImdb.Api.dll
 C:\Users\tolun\source\repos\MyImdb\MyImdb.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\tolun\source\repos\MyImdb\MyImdb.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -26,6 +26,8 @@ builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 }).AddEntityFrameworkStores<DataContext>()
 .AddDefaultTokenProviders();
 
+
+
 builder.Services.Configure<SecurityStampValidatorOptions>(x =>
 {
     x.ValidationInterval = TimeSpan.Zero;
